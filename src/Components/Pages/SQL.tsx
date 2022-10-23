@@ -31,8 +31,8 @@ export default function SQL({
 
   return (
     <div className="space-y-4">
-      <TrainerHeader>Kategorien</TrainerHeader>
-      <p>Wählen Sie die gewünschten Kategorien aus:</p>
+      <TrainerHeader>SQL</TrainerHeader>
+      <p>Starten Sie das Quiz:</p>
 
       {/* Only render Checkbox list if the categories are loaded in */}
       {categories ? (
