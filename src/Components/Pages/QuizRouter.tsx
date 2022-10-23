@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router'
 import CategorySelection from './CategorySelection'
+import SQL from './SQL'
 import Evaluation from './Evaluation'
 import QuestionsContainer from './QuestionsContainer'
 import _ from 'lodash'
@@ -63,6 +64,17 @@ export default function QuizRouter() {
         path="categories"
         element={
           <CategorySelection
+            categories={categories || []}
+            selectedCategories={selectedCategories}
+            setSelectedCategories={setSelectedCategories}
+            resetQuestions={resetQuestions}
+          />
+        }
+      />
+      <Route
+        path="categories/sql"
+        element={
+          <SQL
             categories={categories || []}
             selectedCategories={selectedCategories}
             setSelectedCategories={setSelectedCategories}
