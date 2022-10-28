@@ -12,7 +12,7 @@ interface Props {
   resetQuestions: () => void
 }
 
-export default function SQL({
+export default function CategorySelectionSQL({
   categories,
   selectedCategories,
   setSelectedCategories,
@@ -34,6 +34,7 @@ export default function SQL({
       <TrainerHeader>SQL</TrainerHeader>
       <p>Starten Sie das Quiz:</p>
 
+      <!--
       {/* Only render Checkbox list if the categories are loaded in */}
       {categories ? (
         <CheckboxList
@@ -44,6 +45,7 @@ export default function SQL({
       ) : (
         <p>Loading...</p>
       )}
+      -->
 
       <PrimaryButton
         onClick={handleStart}
