@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import PrimaryButton from '../UI/PrimaryButton'
+import CheckboxList from '../UI/CheckboxList'
 import TrainerHeader from '../UI/TrainerHeader'
 import { Category } from '../../Types/Category'
 
@@ -11,13 +12,21 @@ interface Props {
   resetQuestions: () => void
 }
 
-export default function CategorySelectionSQL({
+export default function CategorySelection({
   categories,
   selectedCategories,
   setSelectedCategories,
   resetQuestions,
 }: Props) {
   const navigate = useNavigate()
+
+  function precheckCheckbox() {
+    const updatedEntries = selectedCategories.includes(5)
+      ? selectedCategories.filter((entry) => entry !== 5)
+      : [...selectedCategories, 5]
+
+    setSelectedCategories(updatedEntries)
+  }
 
   function handleStart() {
     if (!selectedCategories) return
@@ -28,10 +37,25 @@ export default function CategorySelectionSQL({
     navigate('/quiz/questions')
   }
 
+  useEffect(() => {
+    precheckCheckbox()
+  }, [])
+
   return (
     <div className="space-y-4">
-      <TrainerHeader>SQL</TrainerHeader>
-      <p>Starten Sie das Quiz:</p>
+      <TrainerHeader>Kategorien</TrainerHeader>
+      <p>Wählen Sie die gewünschten Kategorien aus:</p>
+
+      {/* Only render Checkbox list if the categories are loaded in */}
+      {categories ? (
+        <CheckboxList
+          entries={categories}
+          selected={selectedCategories}
+          setSelected={setSelectedCategories}
+        />
+      ) : (
+        <p>Loading...</p>
+      )}
 
       <PrimaryButton
         onClick={handleStart}
