@@ -34,6 +34,8 @@ export default function CategorySelection({
       ? selectedCategories.filter((entry) => entry !== categoryID)
       : [...selectedCategories, categoryID]
 
+    console.log(categoryID)
+
     setSelectedCategories(updatedEntries)
   }
 
