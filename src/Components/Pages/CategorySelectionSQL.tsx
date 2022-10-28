@@ -20,7 +20,6 @@ export default function CategorySelection({
 }: Props) {
   const navigate = useNavigate()
 
-
   function handleStart() {
     if (!selectedCategories) return
 
