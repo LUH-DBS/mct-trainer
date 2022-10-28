@@ -1,7 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import PrimaryButton from '../UI/PrimaryButton'
-import CheckboxList from '../UI/CheckboxList'
 import TrainerHeader from '../UI/TrainerHeader'
 import { Category } from '../../Types/Category'
 
@@ -33,19 +32,6 @@ export default function CategorySelectionSQL({
     <div className="space-y-4">
       <TrainerHeader>SQL</TrainerHeader>
       <p>Starten Sie das Quiz:</p>
-
-      <!--
-      {/* Only render Checkbox list if the categories are loaded in */}
-      {categories ? (
-        <CheckboxList
-          entries={categories}
-          selected={selectedCategories}
-          setSelected={setSelectedCategories}
-        />
-      ) : (
-        <p>Loading...</p>
-      )}
-      -->
 
       <PrimaryButton
         onClick={handleStart}
