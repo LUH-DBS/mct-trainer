@@ -20,13 +20,6 @@ export default function CategorySelection({
 }: Props) {
   const navigate = useNavigate()
 
-  function precheckCheckbox() {
-    const updatedEntries = selectedCategories.includes(5)
-      ? selectedCategories.filter((entry) => entry !== 5)
-      : [...selectedCategories, 5]
-
-    setSelectedCategories(updatedEntries)
-  }
 
   function handleStart() {
     if (!selectedCategories) return
@@ -37,6 +30,19 @@ export default function CategorySelection({
     navigate('/quiz/questions')
   }
 
+  function precheckCheckbox() {
+    const categoryIDs = [6, 7, 8, 9, 10, 11, 12, 13, 14]
+
+    for (let i = 0; i < categoryIDs.length; i++) {
+      const updatedEntries = selectedCategories.includes(categoryIDs[i])
+        ? selectedCategories.filter((entry) => entry !== categoryIDs[i])
+        : [...selectedCategories, categoryIDs[i]]
+
+      setSelectedCategories(updatedEntries)
+    }
+  }
+
+  // runs when page loads
   useEffect(() => {
     precheckCheckbox()
   }, [])
