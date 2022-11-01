@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import PrimaryButton from '../UI/PrimaryButton'
-import CheckboxList from '../UI/CheckboxList'
-import TrainerHeader from '../UI/TrainerHeader'
-import { Category } from '../../Types/Category'
+import PrimaryButton from '../../UI/PrimaryButton'
+import CheckboxList from '../../UI/CheckboxList'
+import TrainerHeader from '../../UI/TrainerHeader'
+import { Category } from '../../../Types/Category'
 
 interface Props {
   categories: Category[]
@@ -29,22 +29,10 @@ export default function CategorySelection({
     navigate('/quiz/questions')
   }
 
-  function precheckCheckbox(categoryID: any) {
-    const updatedEntries = selectedCategories.includes(categoryID)
-      ? selectedCategories.filter((entry) => entry !== categoryID)
-      : [...selectedCategories, categoryID]
-
-    console.log(categoryID)
-
-    setSelectedCategories(updatedEntries)
-  }
-
   // runs when page loads
   useEffect(() => {
-    const categoryIDs = [6, 7, 8, 9, 10, 11]
-    for (let i = 0; i < categoryIDs.length; i++) {
-      precheckCheckbox(categoryIDs[i])
-    }
+    const categoryIDs = [2]
+    setSelectedCategories(categoryIDs)
   }, [])
 
   return (

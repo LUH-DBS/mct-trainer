@@ -1,7 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import { Route, Routes } from 'react-router'
-import CategorySelection from './CategorySelection'
-import CategorySelectionSQL from './CategorySelectionSQL'
+import CategorySelection from './CategorySelectionPages/CategorySelection'
+import CategorySelectionSQL from './CategorySelectionPages/CategorySelectionSQL'
+import CategorySelectionArchitektur from './CategorySelectionPages/CategorySelectionArchitektur'
+import CategorySelectionEinfuehrung from './CategorySelectionPages/CategorySelectionEinfuehrung'
+import CategorySelectionERModellierung from './CategorySelectionPages/CategorySelectionERModellierung'
+import CategorySelectionHistorie from './CategorySelectionPages/CategorySelectionHistorie'
+import CategorySelectionIntegritaetUndTrigger from './CategorySelectionPages/CategorySelectionIntegritaetUndTrigger'
+import CategorySelectionNormalisierung from './CategorySelectionPages/CategorySelectionNormalisierung'
+import CategorySelectionPhasenmodell from './CategorySelectionPages/CategorySelectionPhasenmodell'
+import CategorySelectionRelationaleAlgebra from './CategorySelectionPages/CategorySelectionRelationaleAlgebra'
+import CategorySelectionRelationalerEntwurf from './CategorySelectionPages/CategorySelectionRelationalerEntwurf'
+import CategorySelectionTransaktionsmanagement from './CategorySelectionPages/CategorySelectionTransaktionsmanagement'
 import Evaluation from './Evaluation'
 import QuestionsContainer from './QuestionsContainer'
 import _ from 'lodash'
@@ -72,9 +82,119 @@ export default function QuizRouter() {
         }
       />
       <Route
+        path="categories/architektur"
+        element={
+          <CategorySelectionArchitektur
+            categories={categories || []}
+            selectedCategories={selectedCategories}
+            setSelectedCategories={setSelectedCategories}
+            resetQuestions={resetQuestions}
+          />
+        }
+      />
+      <Route
         path="categories/sql"
         element={
           <CategorySelectionSQL
+            categories={categories || []}
+            selectedCategories={selectedCategories}
+            setSelectedCategories={setSelectedCategories}
+            resetQuestions={resetQuestions}
+          />
+        }
+      />
+      <Route
+        path="categories/einfuehrung"
+        element={
+          <CategorySelectionEinfuehrung
+            categories={categories || []}
+            selectedCategories={selectedCategories}
+            setSelectedCategories={setSelectedCategories}
+            resetQuestions={resetQuestions}
+          />
+        }
+      />
+      <Route
+        path="categories/ermodellierung"
+        element={
+          <CategorySelectionERModellierung
+            categories={categories || []}
+            selectedCategories={selectedCategories}
+            setSelectedCategories={setSelectedCategories}
+            resetQuestions={resetQuestions}
+          />
+        }
+      />
+      <Route
+        path="categories/historie"
+        element={
+          <CategorySelectionHistorie
+            categories={categories || []}
+            selectedCategories={selectedCategories}
+            setSelectedCategories={setSelectedCategories}
+            resetQuestions={resetQuestions}
+          />
+        }
+      />
+      <Route
+        path="categories/integritaetundtrigger"
+        element={
+          <CategorySelectionIntegritaetUndTrigger
+            categories={categories || []}
+            selectedCategories={selectedCategories}
+            setSelectedCategories={setSelectedCategories}
+            resetQuestions={resetQuestions}
+          />
+        }
+      />
+      <Route
+        path="categories/normalisierung"
+        element={
+          <CategorySelectionNormalisierung
+            categories={categories || []}
+            selectedCategories={selectedCategories}
+            setSelectedCategories={setSelectedCategories}
+            resetQuestions={resetQuestions}
+          />
+        }
+      />
+      <Route
+        path="categories/phasenmodell"
+        element={
+          <CategorySelectionPhasenmodell
+            categories={categories || []}
+            selectedCategories={selectedCategories}
+            setSelectedCategories={setSelectedCategories}
+            resetQuestions={resetQuestions}
+          />
+        }
+      />
+      <Route
+        path="categories/relationalealgebra"
+        element={
+          <CategorySelectionRelationaleAlgebra
+            categories={categories || []}
+            selectedCategories={selectedCategories}
+            setSelectedCategories={setSelectedCategories}
+            resetQuestions={resetQuestions}
+          />
+        }
+      />
+      <Route
+        path="categories/relationalerentwurf"
+        element={
+          <CategorySelectionRelationalerEntwurf
+            categories={categories || []}
+            selectedCategories={selectedCategories}
+            setSelectedCategories={setSelectedCategories}
+            resetQuestions={resetQuestions}
+          />
+        }
+      />
+      <Route
+        path="categories/transaktionsmanagement"
+        element={
+          <CategorySelectionTransaktionsmanagement
             categories={categories || []}
             selectedCategories={selectedCategories}
             setSelectedCategories={setSelectedCategories}

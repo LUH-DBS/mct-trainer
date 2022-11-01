@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import PrimaryButton from '../UI/PrimaryButton'
-import CheckboxList from '../UI/CheckboxList'
-import TrainerHeader from '../UI/TrainerHeader'
-import { Category } from '../../Types/Category'
+import PrimaryButton from '../../UI/PrimaryButton'
+import CheckboxList from '../../UI/CheckboxList'
+import TrainerHeader from '../../UI/TrainerHeader'
+import { Category } from '../../../Types/Category'
 
 interface Props {
   categories: Category[]
@@ -28,6 +28,12 @@ export default function CategorySelection({
 
     navigate('/quiz/questions')
   }
+
+  // runs when page loads
+  useEffect(() => {
+    const categoryIDs = [14]
+    setSelectedCategories(categoryIDs)
+  }, [])
 
   return (
     <div className="space-y-4">
