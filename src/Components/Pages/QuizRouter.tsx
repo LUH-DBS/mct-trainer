@@ -12,6 +12,7 @@ import CategorySelectionPhasenmodell from './CategorySelectionPages/CategorySele
 import CategorySelectionRelationaleAlgebra from './CategorySelectionPages/CategorySelectionRelationaleAlgebra'
 import CategorySelectionRelationalerEntwurf from './CategorySelectionPages/CategorySelectionRelationalerEntwurf'
 import CategorySelectionTransaktionsmanagement from './CategorySelectionPages/CategorySelectionTransaktionsmanagement'
+import CategorySelectionBearbeitung from './CategorySelectionPages/CategorySelectionBearbeitung'
 import Evaluation from './Evaluation'
 import QuestionsContainer from './QuestionsContainer'
 import _ from 'lodash'
@@ -85,6 +86,17 @@ export default function QuizRouter() {
         path="categories/architektur"
         element={
           <CategorySelectionArchitektur
+            categories={categories || []}
+            selectedCategories={selectedCategories}
+            setSelectedCategories={setSelectedCategories}
+            resetQuestions={resetQuestions}
+          />
+        }
+      />
+      <Route
+        path="categories/bearbeitung"
+        element={
+          <CategorySelectionBearbeitung
             categories={categories || []}
             selectedCategories={selectedCategories}
             setSelectedCategories={setSelectedCategories}
