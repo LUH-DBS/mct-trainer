@@ -1,66 +1,50 @@
 [
   {
     "id": 1,
-    "name": "K1: Einführung in die Grundbegriffe der Datenbanken"
+    "name": "1: Einführung"
   },
   {
     "id": 2,
-    "name": "K2: Ein Phasenmodell der Datenbankentwicklung"
+    "name": "2: Historie"
   },
   {
     "id": 3,
-    "name": "K3: Das ER-Modell und das EERM (erweitertes Entity-Relationship-Modell)"
+    "name": "3: Architektur"
   },
   {
     "id": 4,
-    "name": "K4: Datenmodelle, relationale Algebra und Anfrageverarbeitung"
+    "name": "4: Phasenmodell für den Datenbankentwurf"
   },
   {
     "id": 5,
-    "name": "K4: Funktionale Abhängigkeiten, Normalformen und Transformation auf ein relationales Datenmodell"
+    "name": "5: ER-Modellierung"
   },
   {
     "id": 6,
-    "name": "K5: Die Datenbanksprache SQL: relationale Bestandteile (DDL)"
+    "name": "6: Relationaler Entwurf"
   },
   {
     "id": 7,
-    "name": "K5: Die Datenbanksprache SQL: relationale Bestandteile (DML, DAL und DQL)"
+    "name": "7: Normalisierung"
   },
   {
     "id": 8,
-    "name": "K5: Die Datenbanksprache SQL2008: SQL-Tuning (Oracle)"
+    "name": "8: Relationale Algebra"
   },
   {
     "id": 9,
-    "name": "K6: Objektrelationales SQL"
+    "name": "9: SQL"
   },
   {
     "id": 10,
-    "name": "K6: Objektrelationale Anwendungsprogrammierung: JDBC"
+    "name": "10: Integrität und Trigger"
   },
   {
     "id": 11,
-    "name": "K6: Objektrelationale Anwendungsprogrammierung: SQLJ"
+    "name": "11: Transaktionsmanagement"
   },
   {
     "id": 12,
-    "name": "K7: Anwendungsprogrammierung: Oracle PL/SQL (Prozeduren und Funktionen)"
-  },
-  {
-    "id": 13,
-    "name": "K7: Anwendungsprogrammierung: Aktive DBMS und PL/SQL-Trigger"
-  },
-  {
-    "id": 14,
-    "name": "K8: Transaktionen und verwandte Konzepte"
-  },
-  {
-    "id": 15,
-    "name": "K9: Physische Speicherstrukturen"
-  },
-  {
-    "id": 16,
-    "name": "K7: PHP und MYSQL"
+    "name": "12: Bearbeitung"
   }
 ]

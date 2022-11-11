@@ -31,7 +31,7 @@ export default function CategorySelection({
 
   // runs when page loads
   useEffect(() => {
-    const categoryIDs = [3]
+    const categoryIDs = [5]
     setSelectedCategories(categoryIDs)
   }, [])
 
