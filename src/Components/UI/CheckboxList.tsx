@@ -5,12 +5,15 @@ interface PropTypes {
   entries: Category[]
   selected: number[]
   setSelected: (newState: number[]) => void
+  grayOutCheckboxes: number[]
+  setGrayOutCheckboxes: (grayOutCheckboxes: number[]) => void
 }
 
 export default function CheckboxList({
   entries,
   selected,
   setSelected,
+  grayOutCheckboxes,
 }: PropTypes) {
   function handleOnChange(value: number) {
     const updatedEntries = selected.includes(value)
@@ -33,6 +36,7 @@ export default function CheckboxList({
                 id={`checkbox-${index}`}
                 checked={selected.includes(entry.id)}
                 onChange={() => handleOnChange(entry.id)}
+                disabled={grayOutCheckboxes.includes(entry.id)}
               />
               <label className="ml-2" htmlFor={`checkbox-${index}`}>
                 {entry.name}

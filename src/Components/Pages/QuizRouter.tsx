@@ -26,6 +26,7 @@ export default function QuizRouter() {
     './data/Categories.json'
   )
 
+  const [grayOutCheckboxes, setGrayOutCheckboxes] = useState<number[]>([])
   const [selectedCategories, setSelectedCategories] = useState<number[]>([])
   const [selectedQuestions, setSelectedQuestions] = useState<Question[]>([])
   const [selectedAnswersArrays, setSelectedAnswersArrays] = useState<
@@ -79,6 +80,8 @@ export default function QuizRouter() {
             selectedCategories={selectedCategories}
             setSelectedCategories={setSelectedCategories}
             resetQuestions={resetQuestions}
+            grayOutCheckboxes={grayOutCheckboxes}
+            setGrayOutCheckboxes={setGrayOutCheckboxes}
           />
         }
       />
@@ -90,6 +93,8 @@ export default function QuizRouter() {
             selectedCategories={selectedCategories}
             setSelectedCategories={setSelectedCategories}
             resetQuestions={resetQuestions}
+            grayOutCheckboxes={grayOutCheckboxes}
+            setGrayOutCheckboxes={setGrayOutCheckboxes}
           />
         }
       />
@@ -101,6 +106,8 @@ export default function QuizRouter() {
             selectedCategories={selectedCategories}
             setSelectedCategories={setSelectedCategories}
             resetQuestions={resetQuestions}
+            grayOutCheckboxes={grayOutCheckboxes}
+            setGrayOutCheckboxes={setGrayOutCheckboxes}
           />
         }
       />
@@ -112,6 +119,8 @@ export default function QuizRouter() {
             selectedCategories={selectedCategories}
             setSelectedCategories={setSelectedCategories}
             resetQuestions={resetQuestions}
+            grayOutCheckboxes={grayOutCheckboxes}
+            setGrayOutCheckboxes={setGrayOutCheckboxes}
           />
         }
       />
@@ -123,6 +132,8 @@ export default function QuizRouter() {
             selectedCategories={selectedCategories}
             setSelectedCategories={setSelectedCategories}
             resetQuestions={resetQuestions}
+            grayOutCheckboxes={grayOutCheckboxes}
+            setGrayOutCheckboxes={setGrayOutCheckboxes}
           />
         }
       />
@@ -134,6 +145,8 @@ export default function QuizRouter() {
             selectedCategories={selectedCategories}
             setSelectedCategories={setSelectedCategories}
             resetQuestions={resetQuestions}
+            grayOutCheckboxes={grayOutCheckboxes}
+            setGrayOutCheckboxes={setGrayOutCheckboxes}
           />
         }
       />
@@ -145,6 +158,8 @@ export default function QuizRouter() {
             selectedCategories={selectedCategories}
             setSelectedCategories={setSelectedCategories}
             resetQuestions={resetQuestions}
+            grayOutCheckboxes={grayOutCheckboxes}
+            setGrayOutCheckboxes={setGrayOutCheckboxes}
           />
         }
       />
@@ -156,6 +171,8 @@ export default function QuizRouter() {
             selectedCategories={selectedCategories}
             setSelectedCategories={setSelectedCategories}
             resetQuestions={resetQuestions}
+            grayOutCheckboxes={grayOutCheckboxes}
+            setGrayOutCheckboxes={setGrayOutCheckboxes}
           />
         }
       />
@@ -167,6 +184,8 @@ export default function QuizRouter() {
             selectedCategories={selectedCategories}
             setSelectedCategories={setSelectedCategories}
             resetQuestions={resetQuestions}
+            grayOutCheckboxes={grayOutCheckboxes}
+            setGrayOutCheckboxes={setGrayOutCheckboxes}
           />
         }
       />
@@ -178,6 +197,8 @@ export default function QuizRouter() {
             selectedCategories={selectedCategories}
             setSelectedCategories={setSelectedCategories}
             resetQuestions={resetQuestions}
+            grayOutCheckboxes={grayOutCheckboxes}
+            setGrayOutCheckboxes={setGrayOutCheckboxes}
           />
         }
       />
@@ -189,6 +210,8 @@ export default function QuizRouter() {
             selectedCategories={selectedCategories}
             setSelectedCategories={setSelectedCategories}
             resetQuestions={resetQuestions}
+            grayOutCheckboxes={grayOutCheckboxes}
+            setGrayOutCheckboxes={setGrayOutCheckboxes}
           />
         }
       />
@@ -200,6 +223,8 @@ export default function QuizRouter() {
             selectedCategories={selectedCategories}
             setSelectedCategories={setSelectedCategories}
             resetQuestions={resetQuestions}
+            grayOutCheckboxes={grayOutCheckboxes}
+            setGrayOutCheckboxes={setGrayOutCheckboxes}
           />
         }
       />
@@ -211,6 +236,8 @@ export default function QuizRouter() {
             selectedCategories={selectedCategories}
             setSelectedCategories={setSelectedCategories}
             resetQuestions={resetQuestions}
+            grayOutCheckboxes={grayOutCheckboxes}
+            setGrayOutCheckboxes={setGrayOutCheckboxes}
           />
         }
       />

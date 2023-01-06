@@ -10,6 +10,8 @@ interface Props {
   selectedCategories: number[]
   setSelectedCategories: (selectedCategories: number[]) => void
   resetQuestions: () => void
+  grayOutCheckboxes: number[]
+  setGrayOutCheckboxes: (grayOutCheckboxes: number[]) => void
 }
 
 export default function CategorySelection({
@@ -17,6 +19,8 @@ export default function CategorySelection({
   selectedCategories,
   setSelectedCategories,
   resetQuestions,
+  grayOutCheckboxes,
+  setGrayOutCheckboxes,
 }: Props) {
   const navigate = useNavigate()
 
@@ -31,8 +35,12 @@ export default function CategorySelection({
 
   // runs when page loads
   useEffect(() => {
+    // setting pre-selected categories
     const categoryIDs = [5]
     setSelectedCategories(categoryIDs)
+    // setting disabled questions
+    const disabledIDs = [2, 3, 6, 12]
+    setGrayOutCheckboxes(disabledIDs)
   }, [])
 
   return (
@@ -46,6 +54,8 @@ export default function CategorySelection({
           entries={categories}
           selected={selectedCategories}
           setSelected={setSelectedCategories}
+          grayOutCheckboxes={grayOutCheckboxes}
+          setGrayOutCheckboxes={setGrayOutCheckboxes}
         />
       ) : (
         <p>Loading...</p>
