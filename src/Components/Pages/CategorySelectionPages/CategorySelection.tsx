@@ -35,9 +35,6 @@ export default function CategorySelection({
 
   // runs when page loads
   useEffect(() => {
-    // setting pre-selected categories
-    const categoryIDs = [2]
-    setSelectedCategories(categoryIDs)
     // setting disabled questions
     const disabledIDs = [2, 3, 6, 12]
     setGrayOutCheckboxes(disabledIDs)
